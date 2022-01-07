@@ -10,7 +10,8 @@ class MovieDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
-        actionBar?.title="Movie"
+        supportActionBar?.title= "Movies"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         Glide.with(movieImage).load(intent.getStringExtra("MoviePoster")).into(movieImage)
         tvMovieName.text=intent.getStringExtra("MovieTitle")
         tvMovieReleaseDate.text=intent.getStringExtra("MovieReleaseDate")
