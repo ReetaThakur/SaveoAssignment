@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity(),MovieClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.title="Movies"
         viewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
         setAdapter()
         viewModel.getMovie().observe(this, {
