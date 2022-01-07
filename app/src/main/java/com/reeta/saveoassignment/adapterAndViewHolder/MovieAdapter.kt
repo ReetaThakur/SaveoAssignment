@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.reeta.saveoassignment.R
 import com.reeta.saveoassignment.apiResponse.Result
+import com.reeta.saveoassignment.ui.MovieClick
 
-class MovieAdapter : PagingDataAdapter<Result, MovieAdapter.MovieViewHolder>(diffUtil) {
+class MovieAdapter(val listner:MovieClick) : PagingDataAdapter<Result, MovieAdapter.MovieViewHolder>(diffUtil) {
     /* pager adapter take parameter as  result class(where our information store)
       ,view Holder and diffUtil for comparing old item and new item like DiffUtil class */
     companion object {
@@ -47,7 +48,7 @@ class MovieAdapter : PagingDataAdapter<Result, MovieAdapter.MovieViewHolder>(dif
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val view: View =
             LayoutInflater.from(parent.context).inflate(R.layout.movie_item_layout, parent, false)
-        return MovieViewHolder(view)
+        return MovieViewHolder(view,listner)
     }
 
 
@@ -55,11 +56,14 @@ class MovieAdapter : PagingDataAdapter<Result, MovieAdapter.MovieViewHolder>(dif
     this is movie view holder class for the view and i am using glide library for image
     loading
      */
-    class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class MovieViewHolder(view: View,val listner:MovieClick) : RecyclerView.ViewHolder(view) {
         val moviePoster: ImageView = view.findViewById(R.id.moviePoster)
         fun setData(model: Result) {
-            var pathImage = "https://image.tmdb.org/t/p/w500"
+            val pathImage = "https://image.tmdb.org/t/p/w500"
             Glide.with(moviePoster).load(pathImage + model.poster_path).into(moviePoster)
+            moviePoster.setOnClickListener {
+                listner.goToMovieDetails(model)
+            }
         }
 
     }

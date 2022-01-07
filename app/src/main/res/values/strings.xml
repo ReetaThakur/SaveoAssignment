@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">SaveoAssignment</string>
     <string name="crime">CRIME</string>
+    <string name="mystery">Mystery</string>
+    <string name="drama">DRAMA</string>
+    <string name="r_3h_7min">R | 3h 7min | </string>
+    <string name="synopsis">Synopsis</string>
+    <string name="_4_5">4.5</string>
 </resources>

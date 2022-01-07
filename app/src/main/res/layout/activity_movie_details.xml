@@ -5,94 +5,170 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MovieDetailsActivity">
-   <androidx.constraintlayout.widget.ConstraintLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
 
-       <View
-           android:layout_width="match_parent"
-           android:layout_height="300dp"
-           android:background="@color/homePage"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-           android:id="@+id/normalView"/>
-       <ImageView
-           android:layout_width="160dp"
-           android:layout_height="160dp"
-           android:id="@+id/movieImage"
-           android:layout_marginStart="30dp"
-           android:layout_marginTop="30dp"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Movie Name"
-           android:textColor="@color/white"
-           android:textStyle="bold"
-           android:textSize="30sp"
-           app:layout_constraintStart_toEndOf="@+id/movieImage"
-           app:layout_constraintTop_toTopOf="parent"
-           android:layout_marginTop="30dp"
-           android:id="@+id/tvMovieName"/>
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="R | 3h 7min |"
-           android:textColor="@color/white"
-           android:textSize="15sp"
-           app:layout_constraintStart_toEndOf="@+id/movieImage"
-           app:layout_constraintTop_toBottomOf="@+id/tvMovieName"
-           android:layout_marginTop="3dp"
-           android:id="@+id/tvMovietiming"/>
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Release Date"
-           android:textColor="@color/white"
-           android:textSize="15sp"
-           app:layout_constraintStart_toEndOf="@+id/tvMovietiming"
-           app:layout_constraintTop_toBottomOf="@+id/tvMovieName"
-           android:layout_marginTop="3dp"
-           android:id="@+id/tvMovieReleaseDate"/>
+        <View
+            android:id="@+id/normalView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/homePage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-       <androidx.appcompat.widget.AppCompatButton
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="@string/crime"
-           android:textColor="@color/white"
-           android:textSize="10sp"
-           android:id="@+id/btnFirst"
-           android:background="@drawable/button_shape"
-           app:layout_constraintTop_toBottomOf="@+id/tvMovietiming"
-           app:layout_constraintStart_toEndOf="@+id/movieImage"
-           android:layout_marginTop="30dp"/>
-       <androidx.appcompat.widget.AppCompatButton
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="@string/crime"
-           android:textColor="@color/white"
-           android:textSize="10sp"
-           android:id="@+id/btnSecond"
-           android:background="@drawable/button_shape"
-           app:layout_constraintTop_toBottomOf="@+id/tvMovietiming"
-           app:layout_constraintStart_toEndOf="@+id/btnFirst"
-           android:layout_marginTop="30dp"/>
-       <androidx.appcompat.widget.AppCompatButton
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="@string/crime"
-           android:textColor="@color/white"
-           android:textSize="10sp"
-           android:id="@+id/btnThird"
-           android:background="@drawable/button_shape"
-           app:layout_constraintTop_toBottomOf="@+id/btnSecond"
-           app:layout_constraintStart_toEndOf="@+id/movieImage"
-           android:layout_marginTop="30dp"/>
+        <ImageView
+            android:id="@+id/movieImage"
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tvMovieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/movieImage"
+            app:layout_constraintTop_toTopOf="parent" />
 
-   </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvMovietiming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r_3h_7min"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/movieImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieName" />
+
+        <TextView
+            android:id="@+id/tvMovieReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tvMovietiming"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieName" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/buttonStyle"
+            android:id="@+id/btnFirst"
+            android:background="@drawable/button_shape"
+            android:text="@string/crime"
+            app:layout_constraintStart_toEndOf="@+id/movieImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovietiming" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/buttonStyle"
+            android:id="@+id/btnSecond"
+            android:background="@drawable/button_shape"
+            android:text="@string/mystery"
+            android:layout_marginStart="3dp"
+            app:layout_constraintStart_toEndOf="@+id/btnFirst"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovietiming" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/buttonStyle"
+            android:id="@+id/btnThird"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/button_shape"
+            android:text="@string/drama"
+            app:layout_constraintStart_toEndOf="@+id/btnSecond"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovietiming" />
+
+        <LinearLayout
+            android:id="@+id/ratingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/movieImage"
+            app:layout_constraintTop_toBottomOf="@+id/btnFirst">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/halt_star" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/_4_5"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/movieImage"
+            app:layout_constraintTop_toBottomOf="@+id/ratingLayout" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/book_now_button"
+            android:text="BOOK NOW"
+            android:textColor="#4FAFC1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="65dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviews"/>
+        <TextView
+            android:id="@+id/tvSynopsis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/synopsis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/normalView" />
+
+        <TextView
+            android:id="@+id/tvMovieSynopsis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:text="details"
+            android:textColor="#999999"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSynopsis" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </ScrollView>

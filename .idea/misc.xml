@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Reeta Thakur/AndroidStudioProjects/SaveoAssignment/app/src/main/res/drawable/book_now_button.xml" value="0.12037037037037036" />
         <entry key="..\:/Users/Reeta Thakur/AndroidStudioProjects/SaveoAssignment/app/src/main/res/drawable/button_shape.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/Reeta Thakur/AndroidStudioProjects/SaveoAssignment/app/src/main/res/layout/activity_main.xml" value="0.11322463768115942" />
-        <entry key="..\:/Users/Reeta Thakur/AndroidStudioProjects/SaveoAssignment/app/src/main/res/layout/activity_movie_details.xml" value="0.1" />
+        <entry key="..\:/Users/Reeta Thakur/AndroidStudioProjects/SaveoAssignment/app/src/main/res/layout/activity_movie_details.xml" value="0.18" />
         <entry key="..\:/Users/Reeta Thakur/AndroidStudioProjects/SaveoAssignment/app/src/main/res/layout/movie_item_layout.xml" value="0.11005434782608696" />
       </map>
     </option>
