@@ -8,7 +8,6 @@ this class. we are using base_url and my own api key. getRetrofit function will 
 object through this object we will call api.
  */
 object Network {
-
     val BASE_URL="https://api.themoviedb.org/"
     val API_KEY="160d0d0be3e56d1d4f30ebac5fb17767"
     fun getRetrofit()= Retrofit.Builder().baseUrl(BASE_URL)

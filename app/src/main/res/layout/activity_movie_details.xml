@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MovieDetailsActivity">
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:background="@color/homePage"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           android:id="@+id/normalView"/>
+       <ImageView
+           android:layout_width="160dp"
+           android:layout_height="160dp"
+           android:id="@+id/movieImage"
+           android:layout_marginStart="30dp"
+           android:layout_marginTop="30dp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Movie Name"
+           android:textColor="@color/white"
+           android:textStyle="bold"
+           android:textSize="30sp"
+           app:layout_constraintStart_toEndOf="@+id/movieImage"
+           app:layout_constraintTop_toTopOf="parent"
+           android:layout_marginTop="30dp"
+           android:id="@+id/tvMovieName"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="R | 3h 7min |"
+           android:textColor="@color/white"
+           android:textSize="15sp"
+           app:layout_constraintStart_toEndOf="@+id/movieImage"
+           app:layout_constraintTop_toBottomOf="@+id/tvMovieName"
+           android:layout_marginTop="3dp"
+           android:id="@+id/tvMovietiming"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Release Date"
+           android:textColor="@color/white"
+           android:textSize="15sp"
+           app:layout_constraintStart_toEndOf="@+id/tvMovietiming"
+           app:layout_constraintTop_toBottomOf="@+id/tvMovieName"
+           android:layout_marginTop="3dp"
+           android:id="@+id/tvMovieReleaseDate"/>
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/crime"
+           android:textColor="@color/white"
+           android:textSize="10sp"
+           android:id="@+id/btnFirst"
+           android:background="@drawable/button_shape"
+           app:layout_constraintTop_toBottomOf="@+id/tvMovietiming"
+           app:layout_constraintStart_toEndOf="@+id/movieImage"
+           android:layout_marginTop="30dp"/>
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/crime"
+           android:textColor="@color/white"
+           android:textSize="10sp"
+           android:id="@+id/btnSecond"
+           android:background="@drawable/button_shape"
+           app:layout_constraintTop_toBottomOf="@+id/tvMovietiming"
+           app:layout_constraintStart_toEndOf="@+id/btnFirst"
+           android:layout_marginTop="30dp"/>
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/crime"
+           android:textColor="@color/white"
+           android:textSize="10sp"
+           android:id="@+id/btnThird"
+           android:background="@drawable/button_shape"
+           app:layout_constraintTop_toBottomOf="@+id/btnSecond"
+           app:layout_constraintStart_toEndOf="@+id/movieImage"
+           android:layout_marginTop="30dp"/>
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

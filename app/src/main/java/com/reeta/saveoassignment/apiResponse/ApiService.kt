@@ -10,7 +10,6 @@ query parameter for filtering the data.
 */
 
 interface ApiService {
-
     @GET("3/movie/popular")
     suspend fun getInstance(@Query("api_key") key: String,
                             @Query("page")page:Int):ResponseDTO
